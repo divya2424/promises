@@ -112,6 +112,30 @@ exports.getPharmacists=function(req,res){
 })
 }
 
+//using promises
+exports.abc=function(req,res){
+  User.find({}).exec()
+  .then (function(user){
+    return Doctor.find({}).exec()
+      var array1=[];
+      if(doctor.user_id==user._id){
+        array1.push(doctor);
+        return res.json();
+      }
+    })
+    .then (function(user){
+      return Pharmacist.find({}).exec()
+        var array2=[];
+        if(pharmacist.user_id==user._id){
+          array2.push(pharmacist);
+          return res.json();
+        }
+      })
+
+    })
+  })
+}
+
 // exports.updateUsers=function(req,res){
 //     var id = req.params.id;
 //     User.findOne({_id: id}, function(err, user){
