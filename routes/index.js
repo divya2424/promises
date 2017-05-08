@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-
 var userController = require('../controllers/user');
 
 //path to go to the users
@@ -18,12 +17,12 @@ router.route('/v1/doctors')
   .post(userController.postPharmacists)
   .get(userController.getPharmacists);
 
-//path to get the id of the users
-router.route('/v1/users/update/:id')
-	.put(userController.updateUsers)
-	.delete(userController.deleteUsers)
-  .get(userController.searchuser);
-
+// //path to get the id of the users
+// router.route('/v1/users/update/:id')
+// 	.put(userController.updateUsers)
+// 	.delete(userController.deleteUsers)
+//   .get(userController.searchuser);
+//
   // //path to get the id of the doctors
   // router.route('/v1/doctors/update/:id')
   // 	.post(userController.updateDoctors)
